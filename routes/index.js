@@ -19,6 +19,7 @@ const {getAllEditorials,
        deleteEditorial} = require('../controllers/editorial')
 
 const {getAllProfiles,
+       getOneProfile,
        addShowLoved,
        deleteShowLoved } = require('../controllers/user')
 
@@ -55,10 +56,11 @@ router.delete('/editorial/:editorialId', isAuth, checkRole("ADMIN"), catchErrors
 
 //============USER==============
 
-router.get('/users', isAuth, checkRole("ADMIN"), catchErrors(getAllProfiles))
+router.get('/users', isAuth, catchErrors(getAllProfiles))
+
 
 router.put('/addlove', isAuth, catchErrors(addShowLoved))
-router.delete('/addlove', isAuth, catchErrors(deleteShowLoved))
+router.put('/deletelove', isAuth, catchErrors(deleteShowLoved))
 
 
 module.exports = router;

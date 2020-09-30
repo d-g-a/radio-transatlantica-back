@@ -21,7 +21,7 @@ router.get('/logout', (req, res, next) => {
 });
 
 router.get('/profile', isAuth, (req, res, next) => {
-  User.findById(req.user._id)
+  User.findById(req.user._id).populate("showsLoved").populate("guest")
     .then((user) => res.status(200).json({ user }))
     .catch((err) => res.status(500).json({ err }));
 });

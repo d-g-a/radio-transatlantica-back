@@ -7,14 +7,10 @@ const userSchema = new Schema(
     pic: String,
     email: String,
     password: String,
-    showsLoved: {
+    showsLoved: [{
         type: Schema.Types.ObjectId,
         ref: "Show"
-    },
-    editorialsLoved: {
-        type: Schema.Types.ObjectId,
-        ref: "Editorial"
-    },
+    }],
     facebookId: String,
     googleId: String,
     role: {
