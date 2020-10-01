@@ -18,13 +18,29 @@ const editorialSchema = new Schema(
     },
     headlineWidth: {
         type: String,
-        enum: ["50%","75%","100%"]
+        enum: ["fifty","seventy-five","hundred"]
     },
     headlineAlignment: {
         type: String,
         enum: ["Left","Center"]
     },
     subHeadline: String,
+    subHeadlineSize:{
+        type: String,
+        enum: ["Small","Medium","Large","Extra-Large"]
+    },
+    subHeadlineTypeface: {
+        type: String,
+        enum: ["Serif","Sans-Serif"]
+    },
+    subHeadlineWidth: {
+        type: String,
+        enum: ["fifty","seventy-five","hundred"]
+    },
+    subHeadlineAlignment: {
+        type: String,
+        enum: ["Left","Center"]
+    },
     bodyText: String,
     bannerImage: String,
     bodyImage1: String,  

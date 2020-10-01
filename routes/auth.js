@@ -20,8 +20,11 @@ router.get('/logout', (req, res, next) => {
   res.status(200).json({ msg: 'Logged out' });
 });
 
-router.get('/profile', isAuth, (req, res, next) => {
-  User.findById(req.user._id).populate("showsLoved").populate("guest")
+router.get('/profile', isAuth, async (req, res, next) => {
+  const result = await User.findById(req.user._id).populate("showsLoved")
+  User.populate(result,{
+      path: 'showsLoved.guest' 
+  })
     .then((user) => res.status(200).json({ user }))
     .catch((err) => res.status(500).json({ err }));
 });
