@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.0124e8ae.chunk.css",
-    "main.js": "/static/js/main.a037084a.chunk.js",
-    "main.js.map": "/static/js/main.a037084a.chunk.js.map",
+    "main.js": "/static/js/main.f935693f.chunk.js",
+    "main.js.map": "/static/js/main.f935693f.chunk.js.map",
     "reactPlayerDailyMotion.js": "/static/js/reactPlayerDailyMotion.f6082a36.chunk.js",
     "reactPlayerDailyMotion.js.map": "/static/js/reactPlayerDailyMotion.f6082a36.chunk.js.map",
     "reactPlayerFacebook.js": "/static/js/reactPlayerFacebook.cc3c2e6f.chunk.js",
@@ -32,7 +32,7 @@
     "static/js/14.52a15720.chunk.js": "/static/js/14.52a15720.chunk.js",
     "static/js/14.52a15720.chunk.js.map": "/static/js/14.52a15720.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.f46d45885624366017ad120494aff9f5.js": "/precache-manifest.f46d45885624366017ad120494aff9f5.js",
+    "precache-manifest.528c5f10719b878e6f52654a72dea362.js": "/precache-manifest.528c5f10719b878e6f52654a72dea362.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.0124e8ae.chunk.css.map": "/static/css/main.0124e8ae.chunk.css.map",
     "static/media/index.css": "/static/media/gt-super-text-book-webfont.4c5e13e6.woff"

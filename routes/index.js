@@ -58,6 +58,7 @@ router.delete('/editorial/:editorialId', isAuth, checkRole("ADMIN"), catchErrors
 
 router.get('/users', isAuth, catchErrors(getAllProfiles))
 
+//============LOVE BUTTON==============
 
 router.put('/addlove', isAuth, catchErrors(addShowLoved))
 router.put('/deletelove', isAuth, catchErrors(deleteShowLoved))

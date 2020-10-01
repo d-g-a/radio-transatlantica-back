@@ -43,22 +43,22 @@ router.get('/profiles', isAuth, (req, res, next) => {
 
 //GOOGLE
 
-router.get(
-    "/auth/google",
-    passport.authenticate("google", { scope: ["profile", "email"] })
-  )
+// router.get(
+//     "/auth/google",
+//     passport.authenticate("google", { scope: ["profile", "email"] })
+//   )
   
-  router.get("/auth/google/callback", (req, res, next) => {
-    passport.authenticate("google", { scope: ["email"] }, (err, user, info) => {
-      if (err) return res.status(500).json({ err, info })
-      if (!user) return res.status(401).json({ err, info })
+//   router.get("/auth/google/callback", (req, res, next) => {
+//     passport.authenticate("google", { scope: ["email"] }, (err, user, info) => {
+//       if (err) return res.status(500).json({ err, info })
+//       if (!user) return res.status(401).json({ err, info })
   
-      req.login(user, error => {
-        if (error) return res.status(401).json({ error })
-        return res.redirect(process.env.FRONTENDPOINT + "/profile")
-      })
-    })(req, res, next)
-  })
+//       req.login(user, error => {
+//         if (error) return res.status(401).json({ error })
+//         return res.redirect(process.env.FRONTENDPOINT + "/profile")
+//       })
+//     })(req, res, next)
+//   })
 //FACEBOOK
 
 router.get(
