@@ -10,9 +10,13 @@ router.post('/signup', (req, res, next) => {
     .catch((err) => res.status(500).json({ err }));
 });
 
-router.post('/login', passport.authenticate('local'), (req, res, next) => {
-  const { user } = req;
-  res.status(200).json({ user });
+router.post('/login', passport.authenticate('local'), async (req, res, next) => {
+    const result = await User.findById(req.user._id).populate("showsLoved")
+    User.populate(result,{
+        path: 'showsLoved.guest' 
+    })
+      .then((user) => res.status(200).json({ user }))
+      .catch((err) => res.status(500).json({ err }));
 });
 
 router.get('/logout', (req, res, next) => {

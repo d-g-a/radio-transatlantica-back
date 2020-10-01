@@ -27,7 +27,7 @@ const editorialSchema = new Schema(
     subHeadline: String,
     subHeadlineSize:{
         type: String,
-        enum: ["Small","Medium","Large","Extra-Large"]
+        enum: ["SH-Small","SH-Medium","SH-Large","SH-Extra-Large"]
     },
     subHeadlineTypeface: {
         type: String,

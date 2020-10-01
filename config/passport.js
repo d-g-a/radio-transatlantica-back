@@ -63,7 +63,10 @@ passport.serializeUser((user, done) => {
 
   //DESERIALIZE 
   passport.deserializeUser(async (id, done) => {
-    const user = await User.findById(id)
+    const user = await User.findById(id).populate("showsLoved")
+    User.populate(user,{
+        path: 'showsLoved.guest' 
+    })
     done(null, user)
   })
   
